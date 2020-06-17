@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/stocktake/stocktake-site#readme",
   "devDependencies": {
-    "firebase-tools": "^8.4.3"
+    "firebase-tools": "^8.4.3",
+    "tslint": "^6.1.2"
   }
 }
