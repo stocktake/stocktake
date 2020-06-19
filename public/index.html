@@ -3,185 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Welcome to Firebase Hosting</title>
+    <title>Stocktake</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.15.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.15.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.15.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.15.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.15.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body {
-        background: #eceff1;
-        color: rgba(0, 0, 0, 0.87);
-        font-family: Roboto, Helvetica, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      #message {
-        background: white;
-        max-width: 360px;
-        margin: 100px auto 16px;
-        padding: 32px 24px;
-        border-radius: 3px;
-      }
-      #message h2 {
-        color: #ffa100;
-        font-weight: bold;
-        font-size: 16px;
-        margin: 0 0 8px;
-      }
-      #message h1 {
-        font-size: 22px;
-        font-weight: 300;
-        color: rgba(0, 0, 0, 0.6);
-        margin: 0 0 16px;
-      }
-      #message p {
-        line-height: 140%;
-        margin: 16px 0 24px;
-        font-size: 14px;
-      }
-      #message a {
-        display: block;
-        text-align: center;
-        background: #039be5;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        padding: 16px;
-        border-radius: 4px;
-      }
-      #message,
-      #message a {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      }
-      #load {
-        color: rgba(0, 0, 0, 0.4);
-        text-align: center;
-        font-size: 13px;
-      }
-      @media (max-width: 600px) {
-        body,
-        #message {
-          margin-top: 0;
-          background: white;
-          box-shadow: none;
-        }
-        body {
-          border-top: 16px solid #ffa100;
-        }
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>
-        You're seeing this because you've successfully setup Firebase Hosting.
-        Now it's time to go build something extraordinary!
-      </p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/"
-        >Open Hosting Documentation</a
-      >
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <!-- Begin Mailchimp Signup Form -->
-    <link
-      href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style type="text/css">
-      #mc_embed_signup {
-        background: #fff;
-        clear: left;
-        font: 14px Helvetica, Arial, sans-serif;
-        width: 100%;
-      }
-      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
-    <div id="mc_embed_signup">
-      <form
-        action="https://stocktake.us10.list-manage.com/subscribe/post?u=088aad37e2c8191ca244afbf1&amp;id=d3cc658ad9"
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        class="validate"
-        target="_blank"
-        novalidate
-      >
-        <div id="mc_embed_signup_scroll">
-          <label for="mce-EMAIL">Subscribe for updates</label>
-          <input
-            type="email"
-            value=""
-            name="EMAIL"
-            class="email"
-            id="mce-EMAIL"
-            placeholder="email address"
-            required
-          />
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input
-              type="text"
-              name="b_088aad37e2c8191ca244afbf1_d3cc658ad9"
-              tabindex="-1"
-              value=""
-            />
-          </div>
-          <div class="clear">
-            <input
-              type="submit"
-              value="Subscribe"
-              name="subscribe"
-              id="mc-embedded-subscribe"
-              class="button"
-            />
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <!--End mc_embed_signup-->
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ["auth", "database", "messaging", "storage"].filter(
-            (feature) => typeof app[feature] === "function"
-          );
-          document.getElementById(
-            "load"
-          ).innerHTML = `Firebase SDK loaded with ${features.join(", ")}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById("load").innerHTML =
-            "Error loading the Firebase SDK, check the console.";
-        }
-      });
-    </script>
-
     <!-- Start of Async Drift Code -->
     <script>
       "use strict";
@@ -236,5 +64,154 @@
       drift.load("rwng94vsx7ss");
     </script>
     <!-- End of Async Drift Code -->
+
+    <!-- Header -->
+    <header id="header">
+      <div class="logo">
+        <a href="index.html">Stocktake</a>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+    <section id="banner" class="bg-img" data-bg="banner.jpg">
+      <div class="inner">
+        <header>
+          <h1>Stocktake</h1>
+        </header>
+      </div>
+      <a href="#about" class="more">Learn More</a>
+    </section>
+
+    <!-- One -->
+    <section id="about" class="wrapper post bg-img" data-bg="banner2.jpg">
+      <div class="inner">
+        <article class="box">
+          <header>
+            <h2>Nibh non lobortis mus nibh</h2>
+            <p>01.01.2017</p>
+          </header>
+          <div class="content">
+            <p>
+              Scelerisque enim mi curae erat ultricies lobortis donec velit in
+              per cum consectetur purus a enim platea vestibulum lacinia et elit
+              ante scelerisque vestibulum. At urna condimentum sed vulputate a
+              duis in senectus ullamcorper lacus cubilia consectetur odio proin
+              sociosqu a parturient nam ac blandit praesent aptent. Eros
+              dignissim mus mauris a natoque ad suspendisse nulla a urna in
+              tincidunt tristique enim arcu litora scelerisque eros suspendisse.
+            </p>
+          </div>
+          <footer>
+            <a href="#footer" class="more">Learn More</a>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <h2>Keep up to date about Stocktake</h2>
+
+        <!-- Begin Mailchimp Signup Form -->
+        <link
+          href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <style type="text/css">
+          #mc_embed_signup {
+            background: #fff;
+            clear: left;
+            font: 14px Helvetica, Arial, sans-serif;
+            width: 100%;
+          }
+          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div id="mc_embed_signup">
+          <form
+            action="https://stocktake.us10.list-manage.com/subscribe/post?u=088aad37e2c8191ca244afbf1&amp;id=d3cc658ad9"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            class="validate"
+            target="_blank"
+            novalidate
+          >
+            <div id="mc_embed_signup_scroll">
+              <label for="mce-EMAIL">Subscribe for updates</label>
+              <input
+                type="email"
+                value=""
+                name="EMAIL"
+                class="email"
+                id="mce-EMAIL"
+                placeholder="email address"
+                required
+              />
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div
+                style="position: absolute; left: -5000px;"
+                aria-hidden="true"
+              >
+                <input
+                  type="text"
+                  name="b_088aad37e2c8191ca244afbf1_d3cc658ad9"
+                  tabindex="-1"
+                  value=""
+                />
+              </div>
+              <div class="clear">
+                <input
+                  type="submit"
+                  value="Subscribe"
+                  name="subscribe"
+                  id="mc-embedded-subscribe"
+                  class="button"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!--End mc_embed_signup-->
+
+        <!-- <ul class="icons">
+          <li>
+            <a href="#" class="icon round fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon round fa-facebook"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon round fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+        </ul>
+
+        <div class="copyright">
+          &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>.
+          Images: <a href="https://unsplash.com">Unsplash</a>.
+        </div> -->
+      </div>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
