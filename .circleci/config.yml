@@ -17,6 +17,17 @@ jobs:
           key: v1-npm-deps-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
+     - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "functions/package-lock.json" }}
+            - v1-npm-deps-
+      - run:
+          name: Install Dependencies
+          command: cd functions && npm install
+      - save_cache:
+          key: v1-npm-deps-{{ checksum "functions/package-lock.json" }}
+          paths:
+            - ./functions/node_modules
       - run:
           name: Build Site
           command: npm run build
