@@ -27,7 +27,7 @@ module.exports = {
       url: 'https://www.facebook.com/Stocktake-106398164459696',
     },
     {
-      icon: 'fa-envelope-o',
+      icon: 'fa-envelope',
       name: 'Email',
       url: 'mailto:ruairitobrien@gmail.com',
     },

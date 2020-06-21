@@ -37,6 +37,10 @@ const Layout: FC = ({ children }) => {
         ]}
       >
         <script src={withPrefix('drift.js')} type="text/javascript" />
+        <script
+          src="https://kit.fontawesome.com/aad507b4a9.js"
+          crossorigin="anonymous"
+        ></script>
         <html lang="en" />
       </Helmet>
       <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>

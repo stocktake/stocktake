@@ -22,7 +22,7 @@ const IndexPage = () => (
 
       <div className="box alt container">
         <section className="feature left">
-          <a href="/#" className="image icon fa-mobile">
+          <a href="/#" className="image icon fa-mobile-alt">
             <img src={banner} alt="" />
           </a>
           <div className="content">
