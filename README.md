@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://stocktake.io">
-    <img alt="Stocktake" src="src/assets/img/stocktake-logo.svg" width="60" />
+    <img alt="Stocktake" src="src/assets/img/stocktake-logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
