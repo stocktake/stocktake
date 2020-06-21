@@ -1,37 +1,13 @@
-import { Link } from "gatsby"
-import React, { FC } from "react"
+import React from 'react'
+import config from '../../config'
+import logo from '../assets/img/stocktake-icon.png'
 
-interface HeaderProps {
-  siteTitle: string
-}
-
-const Header: FC<HeaderProps> = ({ siteTitle = "" }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+export default function Header() {
+  return (
+    <div id="header">
+      <img className="logo icon" src={logo} />
+      <h1>{config.heading}</h1>
+      <p>{config.subHeading}</p>
     </div>
-  </header>
-)
-
-export default Header
+  )
+}

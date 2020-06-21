@@ -1,18 +1,22 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React, { FC, useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
+import { graphql, useStaticQuery, withPrefix } from 'gatsby'
 
-import React, { FC } from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql, withPrefix } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+import '../assets/sass/main.scss'
 
 const Layout: FC = ({ children }) => {
+  const [isPreloaded, setIsPreloaded] = useState(true)
+  let timeoutId: any
+
+  useEffect(() => {
+    timeoutId = setTimeout(() => {
+      setIsPreloaded(false)
+    }, 100)
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [timeoutId])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,24 +29,18 @@ const Layout: FC = ({ children }) => {
 
   return (
     <>
-      <Helmet>
-        <script src={withPrefix("drift.js")} type="text/javascript" />
-        <link
-          href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-      </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          { name: 'description', content: 'Stocktake' },
+          { name: 'keywords', content: 'site, web, stocktake' },
+        ]}
       >
-        <main>{children}</main>
-        <footer></footer>
+        <script src={withPrefix('drift.js')} type="text/javascript" />
+        <html lang="en" />
+      </Helmet>
+      <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
+        {children}
       </div>
     </>
   )
