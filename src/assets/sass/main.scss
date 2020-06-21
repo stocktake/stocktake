@@ -1074,7 +1074,8 @@ input[type='button'],
 
 #header {
   background-attachment: scroll, scroll, fixed;
-  background-image: url('../img/top-3200.svg'), url('../img/overlay.png'),
+  background-image: url('../img/top-3200.svg'),
+    linear-gradient(0deg, rgba(251, 3, 119, 0.4), rgba(0, 26, 255, 0.5)),
     url('../img/banner.jpg');
   background-position: bottom center, top left, center center;
   background-repeat: repeat-x, repeat, no-repeat;
