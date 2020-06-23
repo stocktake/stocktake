@@ -27,7 +27,7 @@ const IndexPage = () => (
           </a>
           <div className="content">
             <h3>No need for expensive hardware</h3>
-            <p>Use what you already have. Phones, tables, laptops.</p>
+            <p>Use what you already have. Phones, tablets, laptops.</p>
           </div>
         </section>
         <section className="feature right">
